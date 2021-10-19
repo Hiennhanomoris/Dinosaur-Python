@@ -8,4 +8,6 @@ class Background:
         self.pic = pygame.image.load(pic)
 
     def Movement(self):
-        self.x_pos -= 5    
+        self.x_pos -= 1   
+        if self.x_pos < -600:
+            self.x_pos = 0
