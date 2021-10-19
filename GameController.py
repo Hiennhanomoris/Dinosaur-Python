@@ -5,7 +5,7 @@ from class_background import Background
 # tao man console rong 600 cao 300
 pygame.init()
 screen = pygame.display.set_mode((600, 300))
-pygame.display.set_caption("dinosaur", icontitle=None)
+pygame.display.set_caption("dinosaur")
 
 # tao bien can dung trong truong trinh
 endGame =  False
@@ -22,4 +22,9 @@ def LoadImage():
 while endGame == False:
     clock.tick(120)                         # gioi han cho truong trinh chay 120f/s
     screen.fill((255, 255, 255))            # do mau cho man hinh thanh trang
-    LoadImage()                             # load anh qua moi frame
+    LoadImage() 
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            endGame = True
+        pygame.display.flip()
+pygame.quit                            # load anh qua moi frame
