@@ -22,9 +22,11 @@ def LoadImage():
 while endGame == False:
     clock.tick(120)                         # gioi han cho truong trinh chay 120f/s
     screen.fill((255, 255, 255))            # do mau cho man hinh thanh trang
-    LoadImage() 
+    LoadImage()                             # load anh qua moi frame
+
+    # quit game 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             endGame = True
         pygame.display.flip()
-pygame.quit                            # load anh qua moi frame
+pygame.quit                            
