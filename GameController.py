@@ -30,8 +30,8 @@ def LoadImage():
     tree_load = screen.blit(tree.pic, (tree.x_pos, tree.y_pos))
     dinosau_load = screen.blit(dinosaur.pic, (dinosaur.x_pos, dinosaur.y_pos))
     score_txt = score.font.render("Score: " + str(score.point), True, (100, 200, 168))
-    screen.blit(score_txt, (5, 5))
-    
+    screen.blit(score_txt, (230, 5)) 
+
 # vong lap game
 while endGame == False:
     clock.tick(120)                         # gioi han cho truong trinh chay 120f/s

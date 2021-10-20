@@ -6,11 +6,14 @@ class Tree:
         self.x_pos = x_pos
         self.y_pos = y_pos
         self.pic = pygame.image.load(pic)
+        self.x_vel = 2
     
     def move(self):
-        self.x_pos -= 2   
+        self.x_pos -= self.x_vel  
         if self.x_pos < 0:
             self.x_pos = 550
+
+        self.x_vel += 0.001
         
 
 
