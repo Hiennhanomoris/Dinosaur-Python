@@ -32,10 +32,9 @@ while endGame == False:
     screen.fill((255, 255, 255))            # do mau cho man hinh thanh trang
     LoadImage()                             # load anh qua moi frame
     background1.Movement()
-
     # quit game 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             endGame = True
-        pygame.display.flip()
+    pygame.display.update()
 pygame.quit                            
