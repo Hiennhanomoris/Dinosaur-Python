@@ -1,7 +1,5 @@
 import pygame
 
-from class_tree import Tree
-
 class Dinosaur:
 
     def __init__(self, x_pos, y_pos, pic):
