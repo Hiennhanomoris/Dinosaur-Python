@@ -1,5 +1,6 @@
 import pygame
 
+from pygame.constants import K_SPACE, KEYDOWN
 from class_background import Background
 from class_dinosaur import Dinosaur
 from class_tree import Tree
@@ -17,7 +18,7 @@ clock = pygame.time.Clock()
 background1 = Background(0, 0, "background.jpg")
 background2 = Background(0, 0, "background.jpg")
 tree = Tree(550, 230, "tree.png")
-dinosaur = Dinosaur(20, 230, "dinosaur.png")
+dinosaur = Dinosaur(60, 230, "dinosaur.png")
 
 # ham load anh
 def LoadImage():
@@ -31,10 +32,15 @@ while endGame == False:
     clock.tick(120)                         # gioi han cho truong trinh chay 120f/s
     screen.fill((255, 255, 255))            # do mau cho man hinh thanh trang
     LoadImage()                             # load anh qua moi frame
-    background1.Movement()
-    # quit game 
+    background1.move()
+    tree.move()
+    dinosaur.jump()                         # handle jumpping        
+ 
     for event in pygame.event.get():
+        # quit game
         if event.type == pygame.QUIT:
             endGame = True
-    pygame.display.update()
+
+    pygame.display.update()                 # giong nhu Update trong Unity
+
 pygame.quit                            
