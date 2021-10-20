@@ -29,7 +29,7 @@ def LoadImage():
     background2_load = screen.blit(background2.pic, (background1.x_pos + 600, background2.y_pos))
     tree_load = screen.blit(tree.pic, (tree.x_pos, tree.y_pos))
     dinosau_load = screen.blit(dinosaur.pic, (dinosaur.x_pos, dinosaur.y_pos))
-    score_txt = score.font.render("Score: " + str(score.point), True, (100, 200, 168))
+    score_txt = score.font.render("Score: " + str(tree.point), True, (100, 200, 168))
     screen.blit(score_txt, (230, 5)) 
 
 # vong lap game
@@ -40,10 +40,6 @@ while endGame == False:
     background1.move()
     tree.move()
     dinosaur.jump()                         # handle jumpping        
-
-    # incre score
-    if tree.x_pos < 2:
-        score.inc_score()
 
     for event in pygame.event.get():
         # quit game
