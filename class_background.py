@@ -12,5 +12,6 @@ class Background:
         self.x_pos -= self.x_vel   
         if self.x_pos < -600:
             self.x_pos = 0
+            
         self.x_vel += 0.001
 
