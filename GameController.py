@@ -15,6 +15,7 @@ pygame.display.set_caption("dinosaur")
 endGame =  False
 clock = pygame.time.Clock()
 game_over = False
+temp = 1
 
 # khoi tao object mau
 background1 = Background(0, 0, "background.jpg")
@@ -55,4 +56,6 @@ while endGame == False:
 
     pygame.display.update()                 # giong nhu Update trong Unity
 
-pygame.quit                            
+pygame.quit              
+
+#kjildkfglid
