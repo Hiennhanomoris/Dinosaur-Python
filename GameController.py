@@ -33,7 +33,8 @@ def LoadImage():
     dinosaur_load = screen.blit(dinosaur.pic, (dinosaur.x_pos, dinosaur.y_pos))
     score_txt = score.font.render("Score: " + str(tree.point), True, (100, 200, 168))
     screen.blit(score_txt, (230, 5)) 
-
+    
+    # va cham voi cay
     if dinosaur_load.colliderect(tree_load):
         game_over_txt = game_over_font.font.render("GAME OVER", True, (255, 0, 0))
         screen.blit(game_over_txt, (150, 100))
