@@ -54,4 +54,6 @@ while endGame == False:
 
     pygame.display.update()                 # giong nhu Update trong Unity
 
-pygame.quit                            
+pygame.quit              
+
+#kjildkfglid
