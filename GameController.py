@@ -58,5 +58,4 @@ while endGame == False:
 
 pygame.quit              
 
-#kjildkfglid
-#gedrfg
+#kjildkfglid jahsfjhakahjsidfhiasdfahsdhasfhahsdfhhasdhuf
